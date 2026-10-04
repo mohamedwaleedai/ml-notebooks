@@ -1,0 +1,7 @@
+# Walmart sales forecast
+
+Weekly store-department sales regression with Linear Regression, XGBoost and LightGBM on calendar, store, holiday, external and lagged-sales features.
+
+The data is the four files `train.csv` (421,570 rows), `test.csv`, `features.csv` and `stores.csv`, matching the layout of the Kaggle Walmart store sales forecasting data. They are not included; place them next to the notebook. The notebook merges them, forward-fills missing values, adds year, month, day-of-week and week-of-year features and sales lags of 1, 2 and 4 weeks per store and department, one-hot encodes store, department, type and holiday flag, and fits the three models. Training-set results: Linear Regression MSE 43,384,449 (R-squared 0.92), XGBoost MSE 13,155,413 (0.97), LightGBM MSE 13,755,811 (0.97).
+
+These scores are measured on the data the models were trained on, with lagged sales as input, so they say little about forecasting accuracy; there is no validation split or time-based cross-validation. Test-set predictions are made with the lag columns set to 0 because the test file has no sales history, so the forecast plot for store 1, department 1 should not be read as a real forecast. The saved notebook was missing its imports, data loading and feature-matrix cells; they were reconstructed, and the outputs come from running the reconstructed version. An earlier saved run reported slightly different MSEs (43,128,448 / 13,303,674 / 13,867,217) with the same R-squared values; the difference was not traced.
