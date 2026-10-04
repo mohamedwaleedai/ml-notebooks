@@ -1,0 +1,10 @@
+# Datasets are third-party and not redistributed; see each notebook's README for the source.
+*.csv
+*.zip
+*.xlsx
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
+*.executed.ipynb
+.DS_Store
