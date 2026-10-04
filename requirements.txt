@@ -8,5 +8,6 @@ xgboost==3.2.0
 lightgbm==4.7.0
 category_encoders==2.11.1
 ipykernel==7.4.0
-# only needed by mobile-price-classification
+# only needed by mobile-price-classification and twitter-sentiment-analysis
 tensorflow==2.21.0
+spacy==3.8.16

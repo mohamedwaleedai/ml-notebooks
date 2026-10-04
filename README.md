@@ -12,6 +12,7 @@ Exploratory and educational machine learning notebooks: data preprocessing, cust
 | [student-performance-regression](student-performance-regression/) | Multiple linear regression on study habits | scikit-learn, pandas | Test R-squared 0.989 |
 | [walmart-sales-forecast](walmart-sales-forecast/) | Linear Regression, XGBoost and LightGBM on lagged weekly sales | XGBoost, LightGBM, pandas | Training-set R-squared 0.92 / 0.97 / 0.97 (not held-out) |
 | [mobile-price-classification](mobile-price-classification/) | Keras MLP predicting a phone's price range from specifications | TensorFlow/Keras, scikit-learn | Test accuracy about 0.93 to 0.95 (unseeded); scaler fitted before the split |
+| [twitter-sentiment-analysis](twitter-sentiment-analysis/) | Four-class tweet sentiment with spaCy, TF-IDF and four classifiers | spaCy, scikit-learn | Random Forest 0.91, k-NN 0.90, Decision Tree 0.81, Logistic Regression 0.79 (saved Kaggle run) |
 
 Each folder has its own README with the dataset, technique and caveats. Several of these results are measured on a single split or on training data, and the folder READMEs say where.
 
